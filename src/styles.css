@@ -204,6 +204,7 @@ h2 {
 
 .elemento_descripcion {
     float: left;
+    font-family: sans-serif ;
 }
 
 .elemento_valor {
