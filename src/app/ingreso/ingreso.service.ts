@@ -1,9 +1,7 @@
 import { Ingreso } from "./ingreso.model";
 
 export class IngresoServicio{
-    ingresos:Ingreso[]=[
-        new Ingreso('Salario', 1800000)
-    ];
+    ingresos:Ingreso[]=[];
 
     eliminar(ingreso:Ingreso){
         const indice:number=this.ingresos.indexOf(ingreso);

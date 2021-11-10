@@ -1,9 +1,7 @@
 import { Egreso } from "./egreso.model";
 
 export class EgresoServicio{
-    egresos:Egreso[]=[
-        new Egreso('Servicios públicos', 300000)
-    ]
+    egresos:Egreso[]=[];
 
     eliminar(egreso:Egreso){
         const indice:number = this.egresos.indexOf(egreso);
