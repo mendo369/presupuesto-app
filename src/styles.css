@@ -155,7 +155,7 @@ body {
 }
 
 .agregar_descripcion {
-  width: 400px;
+  width: auto;
 }
 .agregar_valor {
   width: 100px;
@@ -313,3 +313,24 @@ h2 {
 .no_pagado:hover .elemento_descripcion {
   font-weight: 900;
 }
+
+@media (max-width: 520px) {
+  .contenedor {
+    width: 100%;
+    margin: 60px auto;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: max-content;
+  }
+
+  .ingreso_titulo {
+    color: #28b9b5;
+    text-align: center;
+  }
+  .egreso_titulo {
+    text-align: center;
+    color: #ff5049;
+  }
+} ;
