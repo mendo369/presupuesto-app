@@ -1,25 +1,37 @@
 <div class="cabecero">
-    <div class="presupuesto">
-        <div class="presupuesto_titulo">
-            Presupuesto Disponible:
+  <div class="presupuesto">
+    <div class="presupuesto_titulo">Presupuesto Disponible:</div>
+
+    <div class="presupuesto_valor">{{ presupuestoTotal | currency }}</div>
+
+    <div class="presupuesto_ingreso limpiarEstilos">
+      <div class="presupuesto_ingreso--texto">Ingresos</div>
+      <div class="right">
+        <div class="presupuesto_ingreso--valor">
+          {{ ingresoTotal | currency }}
         </div>
-        
-        <div class="presupuesto_valor">{{presupuestoTotal | currency}}</div>
-        
-        <div class="presupuesto_ingreso limpiarEstilos">
-            <div class="presupuesto_ingreso--texto">Ingresos</div>
-            <div class="right">
-                <div class="presupuesto_ingreso--valor">{{ingresoTotal | currency}}</div>
-                <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
-            </div>
+      </div>
+    </div>
+
+    <div class="presupuesto_egreso limpiarEstilos">
+      <div class="presupuesto_egreso--text">Egresos</div>
+      <div class="right limpiarEstilos">
+        <div class="presupuesto_egreso--valor">
+          {{ egresoTotal | currency }}
         </div>
-        
-        <div class="presupuesto_egreso limpiarEstilos">
-            <div class="presupuesto_egreso--text">Egresos</div>
-            <div class="right limpiarEstilos">
-                <div class="presupuesto_egreso--valor">{{egresoTotal | currency}}</div>
-                <div class="presupuesto_egreso--porcentaje">{{porcentajeTotal | percent}}</div>
-            </div>
+        <div class="presupuesto_egreso--porcentaje">
+          {{ porcentajeTotal | percent }}
         </div>
+      </div>
+    </div>
+
+    <div class="presupuesto_endeudamiento limpiarEstilos">
+      <div class="presupuesto_endeudamiento--text">Endeudamiento</div>
+      <div class="right limpiarEstilos">
+        <div class="presupuesto_endeudamiento--valor">
+          {{ (ingresoTotal - egresoTotal) * 0.4 | currency }}
+        </div>
+      </div>
     </div>
   </div>
+</div>
